@@ -28,7 +28,7 @@ public class RGB : MonoBehaviour
                 if(go.GetComponent<SpriteRenderer>()!=null)
                 {
                     go.GetComponent<SpriteRenderer>().material.color=compressedColor;
-                    go.GetComponent<SpriteRenderer>().material.SetColor("_EmissionColor", Color.red);
+                    go.GetComponent<SpriteRenderer>().material.SetColor("_EmissionColor", compressedColor);
                 }
                 else if(go.GetComponent<Image>()!=null)
                     go.GetComponent<Image>().color = compressedColor;

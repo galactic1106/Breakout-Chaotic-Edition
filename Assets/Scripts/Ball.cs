@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour
     private GameObject reloadButton;
     void Start()
     {
-        gameObject.transform.rotation = Quaternion.EulerRotation(new Vector3(0, 0, Random.Range(-225, -125)));
+        gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-225, -135)));
         rb = gameObject.GetComponent<Rigidbody2D>();
         lose=GameObject.FindGameObjectWithTag("Lose");
         lose.SetActive(false);
