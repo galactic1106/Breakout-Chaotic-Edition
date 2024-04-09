@@ -6,7 +6,7 @@ public class movementFunctions : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D rb;
-    private bool leftPressed=false, rightPressed=false;
+    private bool leftPressed = false, rightPressed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +16,8 @@ public class movementFunctions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.LeftArrow)||leftPressed) { moveLeft(); }
-        if(Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.RightArrow)||rightPressed) { moveRight();}
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || leftPressed) { moveLeft(); }
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || rightPressed) { moveRight(); }
     }
 
     public void moveLeft()
@@ -33,7 +33,7 @@ public class movementFunctions : MonoBehaviour
     }
 
     public void onAttackRight()
-    {     
+    {
         rightPressed = !rightPressed;
     }
 

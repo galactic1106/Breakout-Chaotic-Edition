@@ -22,15 +22,15 @@ public class RGB : MonoBehaviour
         if (Time.time - lastColorChange > colorChageSpeed)
         {
             RGBLoop();
-            compressedColor=new Color(Compress(r), Compress(g), Compress(b));
-            foreach (GameObject go in gos) 
+            compressedColor = new Color(Compress(r), Compress(g), Compress(b));
+            foreach (GameObject go in gos)
             {
-                if(go.GetComponent<SpriteRenderer>()!=null)
+                if (go.GetComponent<SpriteRenderer>() != null)
                 {
-                    go.GetComponent<SpriteRenderer>().material.color=compressedColor;
+                    go.GetComponent<SpriteRenderer>().material.color = compressedColor;
                     go.GetComponent<SpriteRenderer>().material.SetColor("_EmissionColor", compressedColor);
                 }
-                else if(go.GetComponent<Image>()!=null)
+                else if (go.GetComponent<Image>() != null)
                     go.GetComponent<Image>().color = compressedColor;
             }
         }

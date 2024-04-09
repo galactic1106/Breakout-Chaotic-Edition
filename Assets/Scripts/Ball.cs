@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed=1;
+    public float speed = 1;
     private Rigidbody2D rb;
     private GameObject lose;
     private GameObject reloadButton;
@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
     {
         gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-225, -135)));
         rb = gameObject.GetComponent<Rigidbody2D>();
-        lose=GameObject.FindGameObjectWithTag("Lose");
+        lose = GameObject.FindGameObjectWithTag("Lose");
         lose.SetActive(false);
         reloadButton = GameObject.FindGameObjectWithTag("Reset");
         reloadButton.SetActive(false);
@@ -27,7 +27,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
             case "Ground":
                 lose.SetActive(true);

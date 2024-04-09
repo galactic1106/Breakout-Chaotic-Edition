@@ -13,16 +13,16 @@ public class PlaceBlocks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = yStart; i <= yEnd; i+=yJump)
+        for (int i = yStart; i <= yEnd; i += yJump)
         {
             //Debug.Log(i);
-            for(int j = xStart; j <= xEnd; j+=xJump)
+            for (int j = xStart; j <= xEnd; j += xJump)
             {
                 //Debug.Log(j);
                 GameObject go = Instantiate(blockPrefab);
                 go.transform.SetParent(gameObject.transform);
-                go.transform.position = new Vector3(j,i,0);
-                go.GetComponent<SpriteRenderer>().material = materials[Random.Range(0,materials.Length)];
+                go.transform.position = new Vector3(j, i, 0);
+                go.GetComponent<SpriteRenderer>().material = materials[Random.Range(0, materials.Length)];
             }
         }
     }
@@ -30,6 +30,6 @@ public class PlaceBlocks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
