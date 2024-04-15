@@ -35,10 +35,4 @@ public class PlaceBlocks : MonoBehaviour
             if(line!=materials.Length) line++;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

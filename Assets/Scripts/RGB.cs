@@ -38,7 +38,7 @@ public class RGB : MonoBehaviour
     }
 
     private int r = 255, g = 0, b = 0;
-    public int offset = 100;
+    public int offset = 1;
     enum Stati { s1, s2, s3, s4, s5, s6 }
     Stati stato = Stati.s1;
     void RGBLoop()
