@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     private Rigidbody2D rb;
     private GameObject lose;
     private GameObject reloadButton;
+    public bool invincible = false;
     void Start()
     {
         gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-225, -135)));
@@ -30,6 +31,7 @@ public class Ball : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Ground":
+            	if (invincible) break;
                 lose.SetActive(true);
                 reloadButton.SetActive(true);
                 Destroy(gameObject);
